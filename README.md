@@ -14,10 +14,17 @@ En esta práctica se nos pide reconocer la voz del usuario. Para ello utilizarem
 
 Para ver el funcionamiento del proyecto, vea este vídeo:  
 
-[youtube]()
+[Youtube](https://youtu.be/8Iy9hvJKaDI)
 
 Gifs:  
 
+Keyword Recognizer:  
+
+![keyword](./Gifs/Keyword.gif)
+
+Dictation Recognizer:
+
+![dictation](./Gifs/Dictation.gif)
 
 
 ## KeywordRecognizer
@@ -31,3 +38,29 @@ El funcionamiento de dictationRecognizer es similar. Creamos el objeto, y en est
 ## GameController
 
 El GameController que se usó para esta práctica es bien simple. Dos cubos transparentes son los encargados de ejecutar las herramientas. Cuando el jugador entre en uno, al ser trigger, la función 'OnTriggerEnter' se ejecutará, y esta avisará al controlador del juego, para que active el evento de que el jugador ha entrado al cubo. Al igual ocurre cuando el jugador sale del cubo, para parar la ejecución del Recognizer. 
+
+Ejemplo de DictationActivator.cs:  
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class DictationActivator : MonoBehaviour
+{
+    void Start()
+    {
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+      GameManager.manager.DictationEnter();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+      GameManager.manager.DictationExit();
+    }
+}
+```
