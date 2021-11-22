@@ -18,12 +18,10 @@ Para ver el funcionamiento del proyecto, vea este vídeo:
 
 Gifs:  
 
-Keyword Recognizer:  
-
+>Keyword Recognizer  
 ![keyword](./Gifs/Keyword.gif)
 
-Dictation Recognizer:
-
+>Dictation Recognizer  
 ![dictation](./Gifs/Dictation.gif)
 
 
